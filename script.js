@@ -1,21 +1,31 @@
-
 document.getElementById("form").addEventListener("submit", async (e) => {
+
     e.preventDefault();
-    const data =  {
-        question1: document.getElementById("q-1").value,
-        question2: document.getElementById("q-2").value,
-        question3: document.getElementById("q-3").value,
-        question4: document.getElementById("q-4").value,
-        question5: document.getElementById("q-5").value,
-        question6: document.getElementById("q-6").value,
+
+    const data = {
+        questions: [
+            {
+                question: document.getElementById("q1").value,
+                answer: document.getElementById("a1").value
+            },
+            {
+                question: document.getElementById("q2").value,
+                answer: document.getElementById("a2").value
+            },
+            {
+                question: document.getElementById("q3").value,
+                answer: document.getElementById("a3").value
+            }
+        ]
     };
 
-    await fetch("/save", {
+    await fetch("/saveQuiz", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(data)
     });
-  alert("Saved!");
+
+    alert("Quiz Saved");
 });

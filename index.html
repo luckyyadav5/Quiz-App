@@ -1,49 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Game</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-
-        body{
-            margin: 0;
-            padding: 0;
-        }
-
-        .m-container{
-            justify-content: center;
-            align-items: center;
-            background-color: beige;
-            width: 500px;
-            height: 130px;  
-        }
-        button{
-            padding: 10px;
-
-        }
-    </style>
+    <title>Teacher Panel</title>
 </head>
 <body>
-    <form id="form">
 
-        <div class="m-container">
-            <input style = "width: 500px; height: 50px; " type="text"  id="q-1" placeholder="Enter your first question">
-            <input style = "width: 500px; height: 50px; " type ="text"  id="q-2" placeholder="Enter your second question">
-            <input style = "width: 500px; height: 50px; " type="text"  id="q-3" placeholder="Enter your third question">
-            <input style = "width: 500px; height: 50px; " type="text"  id="q-4" placeholder="Enter your fourth question">
-            <input style = "width: 500px; height: 50px; " type="text"  id="q-5" placeholder="Enter your fifth question">
-            <input style = "width: 500px; height: 50px; " type="text"  id="q-6" placeholder="Enter your sixth question">
-        
-            <button type="submit">ADD QUESTIONS</button>
-        </div>
+<form id="form">
 
-    </form>
+    <input type="text" id="q1" placeholder="Question 1">
+    <input type="text" id="a1" placeholder="Correct Answer 1">
 
-    <script src="script.js"></script>
+    <input type="text" id="q2" placeholder="Question 2">
+    <input type="text" id="a2" placeholder="Correct Answer 2">
+
+    <input type="text" id="q3" placeholder="Question 3">
+    <input type="text" id="a3" placeholder="Correct Answer 3">
+
+    <button type="submit">Save Quiz</button>
+
+</form>
+
+<script src="script.js"></script>
+
 </body>
 </html>
